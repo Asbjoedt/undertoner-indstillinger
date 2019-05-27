@@ -13,14 +13,14 @@ require_once dirname( __FILE__ ) . '/undertoner-plader/undertoner-plader.php';
 require_once dirname( __FILE__ ) . '/undertoner-reklamebanner/undertoner-reklamebanner.php';
 
 // Laver menu i backend
-add_action( 'admin_menu', 'undertoner_reklamebanner_menu' );
+add_action( 'admin_menu', 'undertoner_indstillinger_menu' );
 
-function undertoner_reklamebanner_menu(){
-  $page_title = 'Undertoner reklamebanner';
-  $menu_title = 'Undertoner reklamebanner';
+function undertoner_indstillinger_menu(){
+  $page_title = 'Undertoner indstillinger';
+  $menu_title = 'Undertoner indstillinger';
   $capability = 'upload_files';
-  $menu_slug  = 'undertoner-reklamebanner';
-  $function   = 'undertoner_reklamebanner_backendside';
+  $menu_slug  = 'undertoner-indstillinger';
+  $function   = 'undertoner_indstillinger_backendside';
   $position   = 4;
 
   add_submenu_page( 'options-general.php', $page_title, $menu_title, $capability, $menu_slug, $function, $position );
@@ -29,7 +29,7 @@ function undertoner_reklamebanner_menu(){
 }
 
 // Laver inputfelter til indstillinger i backend
-function undertoner_reklamebanner_backendside(){
+function undertoner_indstillinger_backendside(){
 ?>  
   <h1>Konfigurer reklamebanner</h1>
   <form method="post" action="options.php">
@@ -53,6 +53,5 @@ function undertoner_reklamebanner_opdater_indstillinger() {
   register_setting( 'undertoner_reklamebanner_indstillinger', 'undertoner_reklamebanner_reklamebillede' );
   register_setting( 'undertoner_reklamebanner_indstillinger', 'undertoner_reklamebanner_boolean' );
 }
-
 
 ?>
