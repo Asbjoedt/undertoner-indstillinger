@@ -41,9 +41,9 @@ function undertoner_indstillinger_backendside(){
 	<tr valign="top"><th scope="row">Angiv URL til billede:</th>
 	<td><input type="text" name="undertoner_reklamebanner_reklamebillede" value="<?php echo get_option( 'undertoner_reklamebanner_reklamebillede' ); ?>"/> Inkluder http://</td></tr>
 	<tr valign="top"><th scope="row">Angiv bredde på reklamebanner:</th>
-	<td><input type="text" name="undertoner_reklamebanner_bredde" value="<?php echo get_option( 'undertoner_reklamebanner_bredde' ); ?>"/>px (anbefalet = 930; udelad værdi hvis fuld størrelse ønskes)</td></tr>
+	<td><input type="text" name="undertoner_reklamebanner_bredde" value="<?php echo get_option( 'undertoner_reklamebanner_bredde' ); ?>"/> px (anbefalet = 930; udelad værdi hvis fuld størrelse ønskes)</td></tr>
 	<tr valign="top"><th scope="row">Angiv højde på reklamebanner:</th>
-	<td><input type="text" name="undertoner_reklamebanner_hoejde" value="<?php echo get_option( 'undertoner_reklamebanner_hoejde' ); ?>"/>px (anbefalet = 180; udelad værdi hvis fuld størrelse ønskes)</td></tr>
+	<td><input type="text" name="undertoner_reklamebanner_hoejde" value="<?php echo get_option( 'undertoner_reklamebanner_hoejde' ); ?>"/> px (anbefalet = 180; udelad værdi hvis fuld størrelse ønskes)</td></tr>
 	<tr valign="top"><th scope="row">Reklamebanner synlig</th>
 	<td><input name="undertoner_reklamebanner_boolean" type="checkbox" value="1" <?php checked( '1', get_option( 'undertoner_reklamebanner_boolean' ) ); ?> /></td></tr>
     	</table>
