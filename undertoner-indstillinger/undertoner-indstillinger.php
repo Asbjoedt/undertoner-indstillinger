@@ -37,9 +37,13 @@ function undertoner_indstillinger_backendside(){
     <?php do_settings_sections( 'undertoner_reklamebanner_indstillinger' ); ?>
 	<table class="form-table">
 	<tr valign="top"><th scope="row">Angiv URL til destination:</th>
-	<td><input type="text" name="undertoner_reklamebanner_hjemmeside" value="<?php echo get_option( 'undertoner_reklamebanner_hjemmeside' ); ?>"/></td></tr>
+	<td><input type="text" name="undertoner_reklamebanner_hjemmeside" value="<?php echo get_option( 'undertoner_reklamebanner_hjemmeside' ); ?>"/> Inkluder http://</td></tr>
 	<tr valign="top"><th scope="row">Angiv URL til billede:</th>
-	<td><input type="text" name="undertoner_reklamebanner_reklamebillede" value="<?php echo get_option( 'undertoner_reklamebanner_reklamebillede' ); ?>"/></td></tr>
+	<td><input type="text" name="undertoner_reklamebanner_reklamebillede" value="<?php echo get_option( 'undertoner_reklamebanner_reklamebillede' ); ?>"/> Inkluder http://</td></tr>
+	<tr valign="top"><th scope="row">Angiv bredde på reklamebanner:</th>
+	<td><input type="text" name="undertoner_reklamebanner_bredde" value="<?php echo get_option( 'undertoner_reklamebanner_bredde' ); ?>"/>px (anbefalet = 930; udelad værdi hvis fuld størrelse ønskes)</td></tr>
+	<tr valign="top"><th scope="row">Angiv højde på reklamebanner:</th>
+	<td><input type="text" name="undertoner_reklamebanner_hoejde" value="<?php echo get_option( 'undertoner_reklamebanner_hoejde' ); ?>"/>px (anbefalet = 180; udelad værdi hvis fuld størrelse ønskes)</td></tr>
 	<tr valign="top"><th scope="row">Reklamebanner synlig</th>
 	<td><input name="undertoner_reklamebanner_boolean" type="checkbox" value="1" <?php checked( '1', get_option( 'undertoner_reklamebanner_boolean' ) ); ?> /></td></tr>
     	</table>
@@ -51,6 +55,8 @@ function undertoner_indstillinger_backendside(){
 function undertoner_reklamebanner_opdater_indstillinger() {
   register_setting( 'undertoner_reklamebanner_indstillinger', 'undertoner_reklamebanner_hjemmeside' );
   register_setting( 'undertoner_reklamebanner_indstillinger', 'undertoner_reklamebanner_reklamebillede' );
+  register_setting( 'undertoner_reklamebanner_indstillinger', 'undertoner_reklamebanner_bredde' );
+  register_setting( 'undertoner_reklamebanner_indstillinger', 'undertoner_reklamebanner_hoejde' );
   register_setting( 'undertoner_reklamebanner_indstillinger', 'undertoner_reklamebanner_boolean' );
 }
 
